@@ -10,3 +10,16 @@ flux bootstrap git \
   --private-key-file=/home/jng/.ssh/id_rsa \
   --path=gitops/flux
 ```
+
+or
+
+```
+export GITHUB_TOKEN=***
+flux bootstrap github \
+  --token-auth \
+  --owner=j6nca \
+  --repository=k8s-sandbox \
+  --branch=main \
+  --path=gitops/flux \
+  --personal
+```
