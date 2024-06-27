@@ -1,0 +1,3 @@
+apiVersion: v2
+name: kube-ops-view
+version: 1.0.0
