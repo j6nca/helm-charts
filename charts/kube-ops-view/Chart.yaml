@@ -1,3 +1,4 @@
+# Manifests obtained from https://codeberg.org/hjacobs/kube-ops-view/src/branch/main/deploy
 apiVersion: v2
 name: kube-ops-view
 version: 1.0.0
