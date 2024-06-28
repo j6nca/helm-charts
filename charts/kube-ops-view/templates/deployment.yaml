@@ -2,26 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    application: kube-ops-view
+    application: {{ .Release.Name }}
     component: frontend
-  name: kube-ops-view
+  name: {{ .Release.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      application: kube-ops-view
+      application: {{ .Release.Name }}
       component: frontend
   template:
     metadata:
       labels:
-        application: kube-ops-view
+        application: {{ .Release.Name }}
         component: frontend
     spec:
-      serviceAccountName: kube-ops-view
+      serviceAccountName: {{ .Release.Name }}
       containers:
       - name: service
         # see https://github.com/hjacobs/kube-ops-view/releases
-        image: hjacobs/kube-ops-view:23.5.0
+        image: hjacobs/{{ .Release.Name }}:23.5.0
         args:
         # # remove this option to use built-in memory store
         # - --redis-url=redis://kube-ops-view-redis:6379
