@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+labels:
+  # Don't modify selector labels, will produce undesired behaviour
+  - includeSelectors: false
+  # Apply labels to pod templates
+  - includeTemplates: true
+  - pairs:
+      owner_team: j6ncas
+      cost_group: test-app
+      cost_subgroup: test-app
+      component_service_group: test-app
+      component_service: test-app
+      environment: lab
+
+resources:
+- all.yaml
