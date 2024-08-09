@@ -3,8 +3,11 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}
+  labels:
+    {{ include "common.metadata.labels" | indent 4 }}
 data: {}
 {{- end -}}
+
 {{- define "common.configmap" -}}
 {{- include "common.util.merge" (append . "common.configmap.tpl") -}}
 {{- end -}}
