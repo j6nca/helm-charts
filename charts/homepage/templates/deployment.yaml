@@ -1,27 +1,8 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: homepage
-  namespace: default
-  labels:
-    app.kubernetes.io/name: homepage
+{{- include "common.deployment" (list . "homepage.deployment") }}
+{{- define "homepage.deployment" }}
 spec:
-  revisionHistoryLimit: 3
-  replicas: 1
-  strategy:
-    type: RollingUpdate
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: homepage
   template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: homepage
     spec:
-      serviceAccountName: homepage
-      automountServiceAccountToken: true
-      dnsPolicy: ClusterFirst
-      enableServiceLinks: true
       containers:
         - name: homepage
           image: "ghcr.io/gethomepage/homepage:latest"
@@ -63,3 +44,4 @@ spec:
             name: homepage
         - name: logs
           emptyDir: {}
+{{- end }}

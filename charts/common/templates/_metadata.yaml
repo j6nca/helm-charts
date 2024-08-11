@@ -1,8 +1,0 @@
-{{- /*
-common.metadata.labels will provide a re-usable standardized set of labels.
-*/}}
-{{- define "common.metadata.labels" -}}
-environment: {{ .Values.metadata.environment | default "local" }}
-service: {{ .Values.metadata.service | default "none" }}
-managedBy: {{ .Values.metadata.managedBy | default "unmanaged" }}
-{{- end -}}

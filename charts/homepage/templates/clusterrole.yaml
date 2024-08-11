@@ -1,9 +1,5 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: homepage
-  labels:
-    app.kubernetes.io/name: homepage
+{{- include "common.cluster_role" (list . "homepage.cluster_role") }}
+{{- define "homepage.cluster_role" }}
 rules:
   - apiGroups:
       - ""
@@ -37,13 +33,10 @@ rules:
     verbs:
       - get
       - list
+{{- end }}
 ---
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: homepage
-  labels:
-    app.kubernetes.io/name: homepage
+{{- include "common.cluster_role_binding" (list . "homepage.cluster_role_binding") }}
+{{- define "homepage.cluster_role_binding" }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -52,3 +45,4 @@ subjects:
   - kind: ServiceAccount
     name: homepage
     namespace: default
+{{- end }}
