@@ -1,12 +1,20 @@
 {{- include "common.configmap" (list . "homepage.configmap") }}
 {{- define "homepage.configmap" }}
 data:
-  kubernetes.yaml: {{ .Values.configuration.kubernetes_yaml | default "" }}
-  settings.yaml: {{ .Values.configuration.settings_yaml | default "" }}
-  custom.css: {{ .Values.configuration.custom_css | default "" }}
-  custom.js: {{ .Values.configuration.custom_js | default "" }}
-  bookmarks.yaml: {{ .Values.configuration.bookmarks_yaml | default "" }}
-  services.yaml: {{ .Values.configuration.services_yaml | default "" }}
-  widgets.yaml: {{ .Values.configuration.widgets_yaml | default "" }}
-  docker.yaml: {{ .Values.configuration.docker_yaml | default "" }}
+  kubernetes.yaml: |
+{{ toYaml .Values.config.kubernetes | indent 4 | default "" }}
+  settings.yaml: |
+{{ toYaml .Values.config.settings | indent 4 | default "" }}
+  custom.css: |
+{{ toYaml .Values.config.custom_css | indent 4 | default "" }}
+  custom.js: |
+{{ toYaml .Values.config.custom_js | indent 4 | default "" }}
+  bookmarks.yaml: |
+{{ toYaml .Values.config.bookmarks | indent 4 | default "" }}
+  services.yaml: |
+{{ toYaml .Values.config.services | indent 4 | default "" }}
+  widgets.yaml: |
+{{ toYaml .Values.config.widgets | indent 4 | default "" }}
+  docker.yaml: |
+{{ toYaml .Values.config.docker | indent 4 | default "" }}
 {{- end }}

@@ -5,34 +5,54 @@ metadata:
 
 # More information on configuring homepage: https://gethomepage.dev/main/
 
-configuration:
-  kubernetes_yaml: |
-    mode: cluster
-  settings_yaml: ""
+config:
   custom_css: ""
   custom_js: ""
-  bookmarks_yaml: |
+  settings: ""
+  kubernetes:
+    mode: cluster
+  bookmarks:
     - Developer:
         - Github:
             - abbr: GH
-              icon: github.svg
-              href: https://github.com
-  services_yaml: |
+              href: https://github.com/
+  services:
     - My First Group:
-          - My First Service:
-                href: http://localhost/
-                description: Homepage is awesome
+        - My First Service:
+            href: http://localhost/
+            description: Homepage is awesome
 
     - My Second Group:
-          - My Second Service:
-                href: http://localhost/
-                description: Homepage is the best
+        - My Second Service:
+            href: http://localhost/
+            description: Homepage is the best
 
     - My Third Group:
-          - My Third Service:
-                href: http://localhost/
-                description: Homepage is 😎
-  widgets_yaml: |
+        - My Third Service:
+            href: http://localhost/
+            description: Homepage is 😎
+  # bookmarks:
+  #   - Developer:
+  #     - Github:
+  #       - abbr: GH
+  #         icon: github.svg
+  #         href: https://github.com
+  # services:
+  #   - My First Group:
+  #     - My First Service:
+  #         href: http://localhost/
+  #         description: Homepage is awesome
+
+  #   - My Second Group:
+  #     - My Second Service:
+  #         href: http://localhost/
+  #         description: Homepage is the best
+
+  #   - My Third Group:
+  #     - My Third Service:
+  #         href: http://localhost/
+  #         description: Homepage is 😎
+  widgets:
     - kubernetes:
         cluster:
           show: true
@@ -53,4 +73,4 @@ configuration:
     - search:
         provider: duckduckgo
         target: _blank
-  docker_yaml: ""
+  docker: ""
