@@ -5,6 +5,8 @@ metadata:
   name: {{ include "common.metadata.name" . }}
   labels:
     {{ include "common.metadata.labels" . | indent 4 }}
+  annotations:
+    reloader.stakater.com/auto: "true"
 spec:
   strategy:
     type: RollingUpdate
