@@ -1,0 +1,9 @@
+apiVersion: v2
+name: podinfo
+type: application
+version: 1.0.0
+
+dependencies:
+- name: podinfo
+  version: 6.7.0
+  repository: https://stefanprodan.github.io/podinfo
