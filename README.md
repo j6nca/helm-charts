@@ -10,4 +10,5 @@ using this repo to deploy helm charts with custom configurations
 
 ```
 helm repo add j6nca https://j6nca.github.io/helm-charts
+helm repo add j6nca https://helm.j6n.ca
 ```
