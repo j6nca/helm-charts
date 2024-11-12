@@ -1,0 +1,125 @@
+apiVersion: v1
+entries:
+  argo-cd:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:35.057227886Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.7.1
+    digest: 8a9f0212898353a338a84df1d7654bd9c4fe0a4364923405775778ff00c39b42
+    name: argo-cd
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/argo-cd-1.0.1/argo-cd-1.0.1.tgz
+    version: 1.0.1
+  common:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:35.225844745Z"
+    description: A Helm library chart for Kubernetes
+    digest: 5b5c6acafb43226f989f0dfabb4378f8447224d239af24ddd1f47c6cf7b0fa76
+    name: common
+    type: library
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/common-0.1.0/common-0.1.0.tgz
+    version: 0.1.0
+  homepage:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-12T06:22:35.398509459Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 403cd0e126a6e267b70bdba20a541db055043ed23056ead8a6c72d9d4328d529
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/homepage-1.3.0/homepage-1.3.0.tgz
+    version: 1.3.0
+  it-tools:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:35.569046599Z"
+    digest: 14a82c5577b258a8b4cd3cb72ec39d8db5365094bafe863e7cd9aab48a5104b8
+    name: it-tools
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/it-tools-1.0.0/it-tools-1.0.0.tgz
+    version: 1.0.0
+  kube-ops-view:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:35.748575908Z"
+    digest: 4c8fb28bf4bc329e0f07ede541197153aa0149af099496587f63c197994d4e67
+    name: kube-ops-view
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-ops-view-1.0.0/kube-ops-view-1.0.0.tgz
+    version: 1.0.0
+  kubelet-serving-cert-approver:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:35.90304543Z"
+    digest: 72b7a8a21b3077b2032357d014f750429b1371da73e0a43bf4642a180c9675db
+    name: kubelet-serving-cert-approver
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kubelet-serving-cert-approver-1.0.0/kubelet-serving-cert-approver-1.0.0.tgz
+    version: 1.0.0
+  kyoo:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:36.11401522Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 02f6bb95d437dc366b0ec48a92542547705f3e3dc438843728d87021d17bad69
+    name: kyoo
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kyoo-1.0.0/kyoo-1.0.0.tgz
+    version: 1.0.0
+  pi-hole:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-12T06:22:36.276726227Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 8d3212b251441945623dd20b53e266aae22b4a26804881af38f877755565b51a
+    name: pi-hole
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/pi-hole-0.1.0/pi-hole-0.1.0.tgz
+    version: 0.1.0
+  podinfo:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:36.452891031Z"
+    dependencies:
+    - name: podinfo
+      repository: https://stefanprodan.github.io/podinfo
+      version: 6.7.1
+    digest: fca1327fc60022882e3821ce7ac8d47896df906a57020717bc2f5d7866a6de46
+    name: podinfo
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/podinfo-1.0.1/podinfo-1.0.1.tgz
+    version: 1.0.1
+  test-app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-12T06:22:36.647632786Z"
+    description: A Helm chart for Kubernetes
+    digest: 9c16ca6b132da60489e681b5d77cd5f44c5fae18bfea316042830175315c66d9
+    name: test-app
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/test-app-0.1.0/test-app-0.1.0.tgz
+    version: 0.1.0
+  yopass:
+  - apiVersion: v2
+    created: "2024-11-12T06:22:36.80111619Z"
+    digest: 9f4d1ab16ff9d8a19f1ff8fb750a39a2d9a827a7733ada6c536866f87f268f02
+    name: yopass
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-11-12T06:22:36.801130467Z"
