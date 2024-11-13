@@ -86,6 +86,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/kyoo-1.0.0/kyoo-1.0.0.tgz
     version: 1.0.0
+  onepassword-connect:
+  - apiVersion: v2
+    created: "2024-11-13T02:36:50.986175795Z"
+    dependencies:
+    - name: connect
+      repository: https://1password.github.io/connect-helm-charts
+      version: 1.15.0
+    description: A Helm chart for Kubernetes
+    digest: d1c23dc45652db8324a248f801507713825908662c2655d54608da51d8ebeff0
+    name: onepassword-connect
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/onepassword-connect-1.0.0/onepassword-connect-1.0.0.tgz
+    version: 1.0.0
   pi-hole:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -133,4 +147,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-13T00:32:09.474693893Z"
+generated: "2024-11-13T02:36:50.986189521Z"
