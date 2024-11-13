@@ -44,6 +44,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/common-0.1.0/common-0.1.0.tgz
     version: 0.1.0
+  goldpinger:
+  - apiVersion: v2
+    created: "2024-11-13T16:18:16.395938525Z"
+    dependencies:
+    - name: goldpinger
+      repository: https://bloomberg.github.io/goldpinger
+      version: 1.0.1
+    description: A Helm chart for Kubernetes
+    digest: b3e2e9296b3acac4e4792d3ce4771053ba6b55775f677d4d240c3c812055fe3f
+    name: goldpinger
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/goldpinger-1.0.0/goldpinger-1.0.0.tgz
+    version: 1.0.0
   homepage:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -171,4 +185,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-13T14:33:35.05782072Z"
+generated: "2024-11-13T16:18:16.395956669Z"
