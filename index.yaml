@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   argo-cd:
   - apiVersion: v2
+    created: "2024-11-16T07:11:50.114242223Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.7.3
+    digest: 53ca0e45c55d97a6cd607d958ec05275bc8d1d7916c6be9ed8385fd32c16ae09
+    name: argo-cd
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/argo-cd-1.0.4/argo-cd-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     created: "2024-11-13T14:33:35.057805832Z"
     dependencies:
     - name: argo-cd
@@ -117,6 +128,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/kube-ops-view-1.0.0/kube-ops-view-1.0.0.tgz
     version: 1.0.0
+  kube-state-metrics:
+  - apiVersion: v2
+    created: "2024-11-16T07:11:50.231705985Z"
+    dependencies:
+    - name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.27.0
+    description: A Helm chart for Kubernetes
+    digest: e453d412248352e5f61f466e01d2287b96dfcbe7bd1c537197a3d7124363c75f
+    name: kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-state-metrics-1.0.0/kube-state-metrics-1.0.0.tgz
+    version: 1.0.0
   kubelet-serving-cert-approver:
   - apiVersion: v2
     created: "2024-11-12T06:22:35.90304543Z"
@@ -227,4 +252,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-16T04:30:23.783254716Z"
+generated: "2024-11-16T07:11:50.231759776Z"
