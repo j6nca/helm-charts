@@ -45,6 +45,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/argo-cd-1.0.1/argo-cd-1.0.1.tgz
     version: 1.0.1
+  cloudflare-tunnel:
+  - apiVersion: v2
+    created: "2024-11-16T23:08:14.673884793Z"
+    dependencies:
+    - name: cloudflare-tunnel
+      repository: https://cloudflare.github.io/helm-charts
+      version: 0.3.2
+    description: A Helm chart for Kubernetes
+    digest: a10f8e96625e1286c676a1fd8da3d4ef2e574451132178675ea6c9bb78196aa1
+    name: cloudflare-tunnel
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/cloudflare-tunnel-1.0.0/cloudflare-tunnel-1.0.0.tgz
+    version: 1.0.0
   common:
   - apiVersion: v2
     created: "2024-11-12T06:22:35.225844745Z"
@@ -252,4 +266,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-16T07:11:50.231759776Z"
+generated: "2024-11-16T23:08:14.673908598Z"
