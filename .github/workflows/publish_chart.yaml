@@ -34,6 +34,7 @@ jobs:
           helm repo add opencost https://opencost.github.io/opencost-helm-chart
           helm repo add cloudflare https://cloudflare.github.io/helm-charts
           helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server
+          helm repo add descheduler https://kubernetes-sigs.github.io/descheduler/
           helm repo add crossplane https://charts.crossplane.io/stable
           helm repo add jetstack https://charts.jetstack.io
           helm repo add headlamp https://headlamp-k8s.github.io/headlamp/
