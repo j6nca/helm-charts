@@ -44,6 +44,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/common-0.1.0/common-0.1.0.tgz
     version: 0.1.0
+  descheduler:
+  - apiVersion: v2
+    created: "2024-11-16T04:30:23.676335041Z"
+    dependencies:
+    - name: descheduler
+      repository: https://kubernetes-sigs.github.io/descheduler/
+      version: 0.31.0
+    description: A Helm chart for Kubernetes
+    digest: a45c8756a35b7bea1d8c24403199238004188aac321ca700c580bc204c39b1ea
+    name: descheduler
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/descheduler-1.0.0/descheduler-1.0.0.tgz
+    version: 1.0.0
   external-secrets:
   - apiVersion: v2
     created: "2024-11-14T06:31:20.930189943Z"
@@ -125,6 +139,20 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/kyoo-1.0.0/kyoo-1.0.0.tgz
     version: 1.0.0
+  metrics-server:
+  - apiVersion: v2
+    created: "2024-11-16T04:30:23.783232785Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server/
+      version: 3.12.2
+    description: A Helm chart for Kubernetes
+    digest: 2bebfca333433c9478e20fd448360093ee0037977905a19b2b4efe4314309b86
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/metrics-server-1.0.0/metrics-server-1.0.0.tgz
+    version: 1.0.0
   onepassword-connect:
   - apiVersion: v2
     created: "2024-11-13T05:12:22.034629161Z"
@@ -199,4 +227,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-14T06:31:20.93020979Z"
+generated: "2024-11-16T04:30:23.783254716Z"
