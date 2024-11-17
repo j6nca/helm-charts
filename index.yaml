@@ -172,6 +172,17 @@ entries:
     version: 1.0.0
   kubelet-serving-cert-approver:
   - apiVersion: v2
+    created: "2024-11-17T03:37:43.526974371Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: d3089dac228c121fe17cac068d66b573ec7d6a968f63b3bb0c4f2ffa70d22176
+    name: kubelet-serving-cert-approver
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kubelet-serving-cert-approver-1.0.1/kubelet-serving-cert-approver-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2024-11-12T06:22:35.90304543Z"
     digest: 72b7a8a21b3077b2032357d014f750429b1371da73e0a43bf4642a180c9675db
     name: kubelet-serving-cert-approver
@@ -280,4 +291,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-17T00:51:48.77656486Z"
+generated: "2024-11-17T03:37:43.527001121Z"
