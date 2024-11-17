@@ -41,7 +41,6 @@ jobs:
           helm repo add onepassword https://1password.github.io/connect-helm-charts
           helm repo add backube https://backube.github.io/helm-charts/
           helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-          helm repo add minicloudlabs https://minicloudlabs.github.io/helm-charts
           helm repo add authentik https://charts.goauthentik.io
           helm repo add stakater https://stakater.github.io/stakater-charts
           helm repo add minio https://operator.min.io
@@ -51,6 +50,7 @@ jobs:
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo add fairwinds https://charts.fairwinds.com/stable
           helm repo add external-dns https://kubernetes-sigs.github.io/external-dns
+          helm repo add twin https://twin.github.io/helm-charts
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
