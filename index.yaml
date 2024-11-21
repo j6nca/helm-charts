@@ -294,6 +294,19 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/podinfo-1.0.1/podinfo-1.0.1.tgz
     version: 1.0.1
+  renovate:
+  - apiVersion: v2
+    created: "2024-11-21T22:19:09.391590906Z"
+    dependencies:
+    - name: renovate
+      repository: https://docs.renovatebot.com/helm-charts
+      version: 39.25.3
+    digest: e90a79ec2885345d553b99eea3b5e33d9859b05823d876aac79edb920d63d704
+    name: renovate
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/renovate-1.0.0/renovate-1.0.0.tgz
+    version: 1.0.0
   test-app:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -313,4 +326,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-17T18:29:30.734095651Z"
+generated: "2024-11-21T22:19:09.391614772Z"
