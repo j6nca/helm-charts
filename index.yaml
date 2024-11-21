@@ -320,6 +320,18 @@ entries:
     version: 1.0.1
   renovate:
   - apiVersion: v2
+    created: "2024-11-21T22:20:25.084114561Z"
+    dependencies:
+    - name: renovate
+      repository: https://docs.renovatebot.com/helm-charts
+      version: 39.25.4
+    digest: 196673fc76f7fca68e993e5c7cec121b50f07ad9cf29b03aff245f883729fdfa
+    name: renovate
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/renovate-1.0.1/renovate-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     created: "2024-11-21T22:19:09.391590906Z"
     dependencies:
     - name: renovate
@@ -350,4 +362,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-21T22:19:41.949458359Z"
+generated: "2024-11-21T22:20:25.084147943Z"
