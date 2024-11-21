@@ -96,6 +96,19 @@ entries:
     version: 1.0.0
   external-secrets:
   - apiVersion: v2
+    created: "2024-11-21T22:19:41.949437921Z"
+    dependencies:
+    - name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: 0.10.6
+    description: A Helm chart for Kubernetes
+    digest: 39a350f874013d758c98afd2edb3200df23efd065247fda72d877490cb343e13
+    name: external-secrets
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/external-secrets-1.0.2/external-secrets-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     created: "2024-11-14T06:31:20.930189943Z"
     dependencies:
     - name: external-secrets
@@ -337,4 +350,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-21T22:19:19.829799714Z"
+generated: "2024-11-21T22:19:41.949458359Z"
