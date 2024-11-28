@@ -2,5 +2,17 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>j6nca/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["helm"],
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["helm"],
+      "matchPackageNames": ["argo-cd"],
+      "enabled": true
+    }
   ]
 }
