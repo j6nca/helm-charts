@@ -278,6 +278,19 @@ entries:
     version: 1.0.0
   onepassword-connect:
   - apiVersion: v2
+    created: "2024-11-29T20:47:10.505584835Z"
+    dependencies:
+    - name: connect
+      repository: https://1password.github.io/connect-helm-charts
+      version: 1.15.1
+    description: A Helm chart for Kubernetes
+    digest: d66c4d593cf413f31083ff8a1c5f6fa90aa01594a811e6e688323d23b0f44fe9
+    name: onepassword-connect
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/onepassword-connect-1.0.2/onepassword-connect-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     created: "2024-11-13T05:12:22.034629161Z"
     dependencies:
     - name: connect
@@ -387,4 +400,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-27T20:20:13.037387853Z"
+generated: "2024-11-29T20:47:10.505631502Z"
