@@ -12,7 +12,7 @@
     },
     {
       "matchDatasources": ["helm"],
-      "matchPackageNames": ["argo-cd"],
+      "matchPackageNames": ["connect"],
       "enabled": true
     }
   ]
