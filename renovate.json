@@ -1,19 +1,67 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>j6nca/renovate-config"
+    "config:recommended"
   ],
+  "timezone": "America/Toronto",
+  "rebaseWhen": "conflicted",
+  "commitBodyTable": true,
   "printConfig": true,
+  "prConcurrentLimit": 6,
+  "prHourlyLimit": 2,
   "packageRules": [
     {
-      "matchDatasources": ["helm"],
-      "matchPackageNames": ["*"],
+      "matchDatasources": ["docker", "github-actions"],
       "enabled": false
     },
     {
       "matchDatasources": ["helm"],
-      "matchPackageNames": ["connect", "k8s-monitoring"],
+      "commitMessageTopic": "helm {{depName}}",
+      "matchUpdateTypes": ["major","minor","patch"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "helm",
+      "bumpVersion": "patch",
+      "addLabels": [
+        "helm"
+      ]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "commitMessageTopic": "github-actions {{depName}}",
+      "addLabels": [
+        "github-actions"
+      ]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "matchPackageNames": ["*"],
+      "enabled": false
+	  },
+    {
+      "matchDatasources": ["helm"],
+      "matchPackageNames": ["k8s-monitoring"],
       "enabled": true
+	  },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": [
+        "major"
+      ]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": [
+        "minor"
+      ]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": [
+        "patch"
+      ]
     }
+  ],
+  "labels": [
+    "renovate"
   ]
 }
