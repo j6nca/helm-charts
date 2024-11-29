@@ -162,6 +162,23 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/goldpinger-1.0.0/goldpinger-1.0.0.tgz
     version: 1.0.0
+  grafana-monitoring:
+  - apiVersion: v2
+    created: "2024-11-29T21:02:15.180169717Z"
+    dependencies:
+    - name: k8s-monitoring
+      repository: https://grafana.github.io/helm-charts
+      version: 1.6.9
+    description: A Helm chart for gathering, scraping, and forwarding Kubernetes telemetry
+      data to a Grafana Stack.
+    digest: b1ad62ba59405f9187200910b6794bda719f1479a1ab837e34b8f58a6c9af170
+    name: grafana-monitoring
+    sources:
+    - https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring-v1
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/grafana-monitoring-1.2.5/grafana-monitoring-1.2.5.tgz
+    version: 1.2.5
   homepage:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -400,4 +417,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-29T20:47:10.505631502Z"
+generated: "2024-11-29T21:02:15.180201636Z"
