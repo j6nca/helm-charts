@@ -3,6 +3,7 @@
   "extends": [
     "github>j6nca/renovate-config"
   ],
+  "printConfig": true,
   "packageRules": [
     {
       "matchDatasources": ["helm"],
