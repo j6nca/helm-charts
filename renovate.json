@@ -27,7 +27,15 @@
       "bumpVersion": "patch",
       "addLabels": [
         "helm"
-      ],
+      ]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["helm"],
       "matchPackageNames": ["k8s-monitoring"],
       "enabled": true
     },
