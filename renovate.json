@@ -12,7 +12,7 @@
     },
     {
       "matchDatasources": ["helm"],
-      "matchPackageNames": ["connect"],
+      "matchPackageNames": ["connect", "k8s-monitoring"],
       "enabled": true
     }
   ]
