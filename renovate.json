@@ -11,11 +11,11 @@
   "prHourlyLimit": 2,
   "packageRules": [
     {
-      "matchManagers": ["github-actions"],
+      "matchManagers": ["*"],
       "enabled": false
     },
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": ["*"],
       "enabled": false
     },
     {
