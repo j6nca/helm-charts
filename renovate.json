@@ -9,15 +9,8 @@
   "printConfig": true,
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
+  "enabledManagers": ["helmv3"],
   "packageRules": [
-    {
-      "matchManagers": ["*"],
-      "enabled": false
-    },
-    {
-      "matchDatasources": ["*"],
-      "enabled": false
-    },
     {
       "matchDatasources": ["helm"],
       "commitMessageTopic": "helm {{depName}}",
