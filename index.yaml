@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  actions-runner-scale-set:
+  - apiVersion: v2
+    appVersion: 0.9.1
+    created: "2024-12-03T15:00:06.282984719Z"
+    dependencies:
+    - name: gha-runner-scale-set
+      repository: oci://ghcr.io/actions/actions-runner-controller-charts
+      version: 0.9.1
+    description: Kubernetes controller for GitHub Actions self-hosted runners
+    digest: e26c6be479a3cce78c60d69ed939526e85a17690d0eda7c29f76276c5a5f9500
+    name: actions-runner-scale-set
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/actions-runner-scale-set-1.0.43/actions-runner-scale-set-1.0.43.tgz
+    version: 1.0.43
   argo-cd:
   - apiVersion: v2
     created: "2024-11-21T22:19:19.829777293Z"
@@ -417,4 +432,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-29T21:02:15.180201636Z"
+generated: "2024-12-03T15:00:06.283023301Z"
