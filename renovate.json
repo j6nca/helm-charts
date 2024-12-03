@@ -33,6 +33,18 @@
       "enabled": true
     },
     {
+      "matchDatasources": ["docker"],
+      "commitMessageTopic": "helm (oci) {{depName}}",
+      "matchUpdateTypes": ["major","minor","patch"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "helm",
+      "bumpVersion": "patch",
+      "addLabels": [
+        "helm",
+        "oci"
+      ]
+    },
+    {
       "matchUpdateTypes": ["major"],
       "addLabels": [
         "major"
