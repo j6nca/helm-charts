@@ -3,11 +3,11 @@ name: actions-runner-scale-set
 description: Kubernetes controller for GitHub Actions self-hosted runners
 
 type: application
-version: 1.0.43
+version: 1.0.44
 appVersion: "0.9.1"
 
 # Version must match actions-runner-scale-set-controller
 dependencies:
   - name: gha-runner-scale-set
     repository: oci://ghcr.io/actions/actions-runner-controller-charts
-    version: 0.9.1
+    version: 0.9.3
