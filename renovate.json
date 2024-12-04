@@ -12,7 +12,7 @@
   "enabledManagers": ["helmv3"],
   "packageRules": [
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": ["helm", "docker"],
       "commitMessageTopic": "helm {{depName}}",
       "matchUpdateTypes": ["major","minor","patch"],
       "semanticCommitType": "chore",
@@ -23,26 +23,18 @@
       ]
     },
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": ["helm", "docker"],
       "matchPackageNames": ["*"],
       "enabled": false
     },
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": ["helm", "docker"],
       "matchPackageNames": ["k8s-monitoring"],
       "enabled": true
     },
     {
       "matchDatasources": ["docker"],
-      "commitMessageTopic": "helm (oci) {{depName}}",
-      "matchUpdateTypes": ["major","minor","patch"],
-      "semanticCommitType": "chore",
-      "semanticCommitScope": "helm",
-      "bumpVersion": "patch",
-      "addLabels": [
-        "helm",
-        "oci"
-      ]
+      "addLabels": ["oci"]
     },
     {
       "matchUpdateTypes": ["major"],
