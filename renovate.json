@@ -23,18 +23,17 @@
       ]
     },
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": ["helm", "docker"],
       "matchPackageNames": ["*"],
       "enabled": false
     },
     {
-      "matchDatasources": ["helm"],
+      "matchDatasources": ["helm", "docker"],
       "matchPackageNames": ["k8s-monitoring"],
       "enabled": true
     },
     {
       "matchDatasources": ["docker"],
-      "commitMessageTopic": "helm (oci) {{depName}}",
       "addLabels": ["oci"]
     },
     {
