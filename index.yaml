@@ -217,6 +217,18 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/it-tools-1.0.0/it-tools-1.0.0.tgz
     version: 1.0.0
+  kestra:
+  - apiVersion: v2
+    created: "2025-02-03T15:22:08.291089855Z"
+    dependencies:
+    - name: kestra
+      repository: https://helm.kestra.io/
+      version: 0.20.13
+    digest: 8e7d98132a8638248cb54e7eefe1b964d540df761a170c1cf60bc9ac21f4286e
+    name: kestra
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kestra-1.0.0/kestra-1.0.0.tgz
+    version: 1.0.0
   kube-ops-view:
   - apiVersion: v2
     created: "2024-11-12T06:22:35.748575908Z"
@@ -432,4 +444,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2024-12-03T15:00:06.283023301Z"
+generated: "2025-02-03T15:22:08.29111399Z"
