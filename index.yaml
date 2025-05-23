@@ -229,6 +229,18 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/kestra-1.0.0/kestra-1.0.0.tgz
     version: 1.0.0
+  kube-cats:
+  - apiVersion: v2
+    created: "2025-05-23T03:37:48.3055716Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: b10a1dc5a7c3d0825e1b625c7892cd9597a55bf03b7b15cf6b0751777c70d062
+    name: kube-cats
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-cats-1.0.0/kube-cats-1.0.0.tgz
+    version: 1.0.0
   kube-ops-view:
   - apiVersion: v2
     created: "2024-11-12T06:22:35.748575908Z"
@@ -444,4 +456,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2025-02-03T15:22:08.29111399Z"
+generated: "2025-05-23T03:37:48.305610295Z"
