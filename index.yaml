@@ -231,6 +231,17 @@ entries:
     version: 1.0.0
   kube-cats:
   - apiVersion: v2
+    created: "2025-05-23T03:59:25.647050934Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: 80ea6ffbb6404c04efd1b0030a60baba57b8f0994d364ce64963f4e8167214e3
+    name: kube-cats
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-cats-1.0.2/kube-cats-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     created: "2025-05-23T03:54:32.261051495Z"
     dependencies:
     - name: common
@@ -467,4 +478,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2025-05-23T03:54:32.261090581Z"
+generated: "2025-05-23T03:59:25.647102579Z"
