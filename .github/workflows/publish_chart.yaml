@@ -37,7 +37,7 @@ jobs:
           helm repo add descheduler https://kubernetes-sigs.github.io/descheduler/
           helm repo add crossplane https://charts.crossplane.io/stable
           helm repo add jetstack https://charts.jetstack.io
-          helm repo add headlamp https://headlamp-k8s.github.io/headlamp/
+          # helm repo add headlamp https://headlamp-k8s.github.io/headlamp/
           helm repo add onepassword https://1password.github.io/connect-helm-charts
           helm repo add backube https://backube.github.io/helm-charts/
           helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
