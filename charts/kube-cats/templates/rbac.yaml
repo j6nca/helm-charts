@@ -1,0 +1,29 @@
+{{- include "common.cluster_role" (list . "kube-cats.cluster_role") }}
+{{- define "kube-cats.cluster_role" }}
+metadata:
+  name: {{ .Release.Name }}
+rules:
+- apiGroups: [""]
+  resources: ["nodes", "pods"]
+  verbs:
+    - list
+- apiGroups: ["metrics.k8s.io"]
+  resources: ["nodes", "pods"]
+  verbs:
+    - get
+    - list
+{{- end }}
+---
+{{- include "common.cluster_role_binding" (list . "kube-cats.cluster_role_binding") }}
+{{- define "kube-cats.cluster_role_binding" }}
+metadata:
+  name: {{ .Release.Name }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ .Release.Name }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+{{- end }}
