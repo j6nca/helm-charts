@@ -46,7 +46,7 @@ metadata:
   labels:
     application: {{ .Release.Name }}-api
     component: api
-  name: {{ .Release.Name }}
+  name: {{ .Release.Name }}-api
 spec:
   replicas: 1
   selector:
