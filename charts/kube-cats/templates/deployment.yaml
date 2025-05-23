@@ -21,6 +21,9 @@ spec:
       containers:
       - name: service
         image: ghcr.io/j6nca/kube-cats:main
+        env:
+        - name: API_URL
+          value: http://{{ .Release.Name }}-api
         ports:
         - containerPort: 3000
           protocol: TCP
@@ -60,6 +63,11 @@ spec:
       containers:
       - name: service
         image: ghcr.io/j6nca/kube-cats-api:main
+        env:
+        - name: API_PORT
+          value: 8080
+        - name: ENVIRONMENT
+          value: production
         ports:
         - containerPort: 8080
           protocol: TCP
