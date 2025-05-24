@@ -21,6 +21,7 @@ spec:
       containers:
       - name: service
         image: ghcr.io/j6nca/kube-cats:main
+        imagePullPolicy: Always
         env:
         - name: API_URL
           value: http://{{ .Release.Name }}-api
@@ -63,6 +64,7 @@ spec:
       containers:
       - name: service
         image: ghcr.io/j6nca/kube-cats-api:main
+        imagePullPolicy: Always
         env:
         - name: API_PORT
           value: "8080"
