@@ -1,4 +1,5 @@
 apiVersion: v2
 name: snapshot-controller
-# Sync chart version with app manifest version
-version: 8.2.5
+version: 1.0.0
+# Tracking manifest version
+appVersion: 8.2.0
