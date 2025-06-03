@@ -231,6 +231,17 @@ entries:
     version: 1.0.0
   kube-cats:
   - apiVersion: v2
+    created: "2025-06-03T01:04:39.710949321Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: 837965e8de9fc2874674b3c4b67bca77b331919a0d52e3f32a053027dbdd1407
+    name: kube-cats
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-cats-1.0.6/kube-cats-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
     created: "2025-05-24T04:42:05.709642214Z"
     dependencies:
     - name: common
@@ -481,6 +492,15 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/renovate-1.0.0/renovate-1.0.0.tgz
     version: 1.0.0
+  snapshot-controller:
+  - apiVersion: v2
+    appVersion: 8.2.0
+    created: "2025-06-03T01:04:39.857578747Z"
+    digest: e0562dbfd22476abd2c6b86c9ab4a928d74783ca8c4cb865f5273c267eb37dc5
+    name: snapshot-controller
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/snapshot-controller-1.0.0/snapshot-controller-1.0.0.tgz
+    version: 1.0.0
   test-app:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -500,4 +520,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2025-05-24T04:42:05.70969357Z"
+generated: "2025-06-03T01:04:39.857638561Z"
