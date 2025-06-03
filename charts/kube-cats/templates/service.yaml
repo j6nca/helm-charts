@@ -5,15 +5,16 @@ kind: Service
 metadata:
   labels:
     application: {{ .Release.Name }}
-    component: frontend
+    component: web
   name: {{ .Release.Name }}
 spec:
   selector:
     application: {{ .Release.Name }}
-    component: frontend
+    component: web
   type: ClusterIP
   ports:
-  - port: 80
+  - name: http
+    port: 80
     protocol: TCP
     targetPort: 3000
 {{- end }}
@@ -33,7 +34,8 @@ spec:
     component: api
   type: ClusterIP
   ports:
-  - port: 80
+  - name: http
+    port: 80
     protocol: TCP
     targetPort: 8080
 {{- end }}
