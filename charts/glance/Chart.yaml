@@ -1,0 +1,11 @@
+apiVersion: v2
+name: glance
+description: A Helm chart for Glance
+type: application
+version: 0.1.0
+appVersion: "v0.8.4"
+
+dependencies:
+  - name: common
+    version: 0.1.0
+    repository: file://../common

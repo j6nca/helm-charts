@@ -1,0 +1,6 @@
+metadata:
+  service: glance
+  group: tools
+
+config:
+  glance:

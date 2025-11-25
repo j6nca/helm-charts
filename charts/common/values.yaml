@@ -1,0 +1,4 @@
+metadata:
+  service: common_service
+  group: common_group
+  owner: common_owner

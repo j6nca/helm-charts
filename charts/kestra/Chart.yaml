@@ -1,8 +1,0 @@
-apiVersion: v2
-name: kestra
-version: 1.0.0
-
-dependencies:
-  - name: kestra
-    repository: https://helm.kestra.io/
-    version: 0.20.13
