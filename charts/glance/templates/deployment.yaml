@@ -1,0 +1,24 @@
+{{- include "common.deployment" (list . "this.deployment") }}
+{{- define "this.deployment" }}
+spec:
+  template:
+    spec:
+      containers:
+        - name: glance
+          image: "glanceapp/glance:v0.8.4"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /app/config
+              name: glance-config
+              subPath: glance.yml
+      volumes:
+        - name: glance-config
+          configMap:
+            name: glance
+        - name: logs
+          emptyDir: {}
+{{- end }}
