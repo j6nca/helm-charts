@@ -5,5 +5,5 @@ version: 1.0.6
 
 dependencies:
 - name: common
-  version: 0.1.1
+  version: 0.1.0
   repository: file://../common
