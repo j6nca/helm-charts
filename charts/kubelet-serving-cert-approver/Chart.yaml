@@ -1,6 +1,6 @@
 apiVersion: v2
 name: kubelet-serving-cert-approver
-version: 1.0.3
+version: 1.0.4
 
 dependencies:
 - name: common
