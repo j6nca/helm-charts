@@ -1,7 +1,7 @@
 # Helm chart for kube-cats: https://github.com/j6nca/kube-cats
 apiVersion: v2
 name: kube-cats
-version: 1.0.6
+version: 1.0.7
 
 dependencies:
 - name: common
