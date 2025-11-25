@@ -1,0 +1,4 @@
+{{- include "common.service" (list . "generic.service") }}
+{{- define "generic.service" }}
+
+{{- end }}

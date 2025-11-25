@@ -1,0 +1,9 @@
+{{- include "common.deployment" (list . "generic.deployment") }}
+{{- define "generic.deployment" }}
+spec:
+  template:
+    spec:
+      containers:
+        - name: {{ .Values.container_name }}
+          image: {{ .Values.image_registry }}/{{ .Values.image_name }}:{{ .Values.image_tag }}
+{{- end }}
