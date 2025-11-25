@@ -197,6 +197,20 @@ entries:
   homepage:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-11-25T20:55:23.930376523Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 3814582b8ac54be6c8cb6ad5d0f83d11dda5c35a71506c15e045a070973177dc
+    name: homepage
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/homepage-1.3.1/homepage-1.3.1.tgz
+    version: 1.3.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-12T06:22:35.398509459Z"
     dependencies:
     - name: common
@@ -230,6 +244,17 @@ entries:
     - https://github.com/j6nca/helm-charts/releases/download/kestra-1.0.0/kestra-1.0.0.tgz
     version: 1.0.0
   kube-cats:
+  - apiVersion: v2
+    created: "2025-11-25T20:55:24.139405033Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: 742b1298809b416d03acf65fd15e1178298f532da4125aff7cf037d6425ef2a2
+    name: kube-cats
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kube-cats-1.0.7/kube-cats-1.0.7.tgz
+    version: 1.0.7
   - apiVersion: v2
     created: "2025-06-03T01:04:39.710949321Z"
     dependencies:
@@ -319,6 +344,17 @@ entries:
     - https://github.com/j6nca/helm-charts/releases/download/kube-state-metrics-1.0.0/kube-state-metrics-1.0.0.tgz
     version: 1.0.0
   kubelet-serving-cert-approver:
+  - apiVersion: v2
+    created: "2025-11-25T20:55:24.367166112Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: d216548bdba7bf60db6c3c024eb40338e37b35202dd92dba79e634fb75a47c48
+    name: kubelet-serving-cert-approver
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/kubelet-serving-cert-approver-1.0.4/kubelet-serving-cert-approver-1.0.4.tgz
+    version: 1.0.4
   - apiVersion: v2
     created: "2024-11-17T18:29:30.734071476Z"
     dependencies:
@@ -430,6 +466,20 @@ entries:
   pi-hole:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-11-25T20:55:24.558446912Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: fdab6b9197e010c6b46993a1930731ba94bb4ea6db756f543f9119856ce10748
+    name: pi-hole
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/pi-hole-0.1.1/pi-hole-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-12T06:22:36.276726227Z"
     dependencies:
     - name: common
@@ -520,4 +570,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2025-06-03T01:04:39.857638561Z"
+generated: "2025-11-25T20:55:24.558579891Z"
