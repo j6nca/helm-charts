@@ -165,6 +165,19 @@ entries:
     version: 1.0.0
   glance:
   - apiVersion: v2
+    created: "2025-11-26T04:10:45.659260919Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    description: A Helm chart for Glance
+    digest: 3241d03ee4b95c8364447052340c5e3948b61f8500763042f7343fb58b2e6c32
+    name: glance
+    type: application
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/glance-0.1.2/glance-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2025-11-26T03:49:09.684596084Z"
     dependencies:
     - name: common
@@ -584,4 +597,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2025-11-26T03:49:09.684657188Z"
+generated: "2025-11-26T04:10:45.659328907Z"
