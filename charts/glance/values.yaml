@@ -4,3 +4,4 @@ metadata:
 
 config:
   glance:
+    # glance.yml contents here
