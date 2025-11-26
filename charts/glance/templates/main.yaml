@@ -1,5 +1,0 @@
-{{- include "common.configmap" (list . "this.configmap") -}}
-{{- define "this.configmap" -}}
-data:
-  myvalue: "Hello World"
-{{- end -}}
