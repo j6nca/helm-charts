@@ -20,7 +20,7 @@ spec:
       serviceAccountName: {{ .Release.Name }}
       containers:
       - name: service
-        image: ghcr.io/j6nca/kube-cats:sha256-311cc7da81b1bcb432a8c9e6757e9934831964bfc24fab1c4444d4d24e774960
+        image: ghcr.io/j6nca/kube-cats:ca1f932
         imagePullPolicy: Always
         env:
         - name: API_URL
@@ -63,7 +63,7 @@ spec:
       serviceAccountName: {{ .Release.Name }}
       containers:
       - name: service
-        image: ghcr.io/j6nca/kube-cats-api:sha256-bc965e1d4848146e38bee3985f07a7bc4dddb6ba800ca4e793109760fbecc84c
+        image: ghcr.io/j6nca/kube-cats-api:ca1f932
         imagePullPolicy: Always
         env:
         - name: API_PORT
