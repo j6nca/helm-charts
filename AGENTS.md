@@ -9,16 +9,18 @@ A reusable Helm chart for running any Docker image that doesn't have an official
 Create a `values.yaml` with your app config:
 
 ```yaml
-image:
-  repository: my-app
-  tag: latest
-ports:
-  - name: http
-    containerPort: 3000
-service:
-  ports:
-    - port: 3000
-      targetPort: http
+components:
+  app:
+    image:
+      repository: my-app
+      tag: latest
+    ports:
+      - name: http
+        containerPort: 3000
+    service:
+      ports:
+        - port: 3000
+          targetPort: http
 ```
 
 Then install:
@@ -27,8 +29,49 @@ Then install:
 helm install my-release charts/generic -f my-values.yaml
 ```
 
+### Multi-component Deployments
+
+Define multiple components in a single values file (e.g. frontend + backend):
+
+```yaml
+components:
+  frontend:
+    image:
+      repository: my-frontend
+      tag: "1.0"
+    ports:
+      - name: http
+        containerPort: 3000
+    service:
+      ports:
+        - port: 3000
+          targetPort: http
+
+  backend:
+    image:
+      repository: my-backend
+      tag: "2.0"
+    ports:
+      - name: http
+        containerPort: 8080
+    env:
+      - name: DB_URL
+        value: postgres://db:5432/mydb
+    service:
+      ports:
+        - port: 8080
+          targetPort: http
+    persistence:
+      enabled: true
+      size: 10Gi
+      mountPath: /data
+```
+
+Each component name becomes the resource name (e.g. Deployment `frontend`, Service `frontend`). Each component configures its own image, ports, env, probes, resources, volumes, service, ingress, configmaps, secrets, service account, persistence, and autoscaling.
+
 ### Key Features
 
+- **Components**: deploy multiple apps in one chart instance — each with its own Deployment, Service, Ingress, ConfigMap, Secret, etc.
 - **Deployment** with full container config: image, env, probes, resources, volumes, init containers, scheduling
 - **Service** with configurable type and ports
 - **Ingress** with TLS, annotations, className

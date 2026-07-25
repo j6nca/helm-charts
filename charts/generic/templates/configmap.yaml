@@ -1,8 +1,11 @@
-{{- define "generic.configmap" }}
+{{- range $name, $config := .Values.configmaps }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $name }}
+  labels:
+    {{- include "generic.labels" (dict "name" $name) | nindent 4 }}
 data:
-  {{- toYaml .Values.configmap.data | nindent 2 }}
-{{- end }}
-
-{{- if .Values.configmap.enabled }}
-{{- include "common.configmap" (list . "generic.configmap") }}
+  {{- toYaml $config.data | nindent 2 }}
 {{- end }}

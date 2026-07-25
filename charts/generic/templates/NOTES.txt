@@ -1,11 +1,15 @@
-{{ .Chart.Name }} has been deployed.
-
-Get the application URL by running:
-  kubectl get svc -n {{ .Release.Namespace }} {{ include "common.metadata.name" . }}
-
-{{- if .Values.ingress.enabled }}
-Access via ingress:
-  {{- range .Values.ingress.hosts }}
-  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ .host }}
-  {{- end }}
+{{- $count := len .Values.deployments | default 0 }}{{ if gt $count 0 }}
+{{ $count }} deployment(s) created.
 {{- end }}
+{{- $count := len .Values.services | default 0 }}{{ if gt $count 0 }}
+{{ $count }} service(s) created.
+{{- end }}
+{{- $count := len .Values.configmaps | default 0 }}{{ if gt $count 0 }}
+{{ $count }} configmap(s) created.
+{{- end }}
+{{- $count := len .Values.secrets | default 0 }}{{ if gt $count 0 }}
+{{ $count }} secret(s) created.
+{{- end }}
+
+Get the list of services by running:
+  kubectl get svc -n {{ .Release.Namespace }}
