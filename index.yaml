@@ -163,6 +163,18 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/gatus-1.0.0/gatus-1.0.0.tgz
     version: 1.0.0
+  generic:
+  - apiVersion: v2
+    created: "2026-07-25T14:10:00.990426234Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.0
+    digest: 566b381778941731ec6d4f2905f694553ae101f314a485c47ebb1a65c9299c01
+    name: generic
+    urls:
+    - https://github.com/j6nca/helm-charts/releases/download/generic-0.1.0/generic-0.1.0.tgz
+    version: 0.1.0
   glance:
   - apiVersion: v2
     created: "2025-11-26T04:10:45.659260919Z"
@@ -619,4 +631,4 @@ entries:
     urls:
     - https://github.com/j6nca/helm-charts/releases/download/yopass-1.0.0/yopass-1.0.0.tgz
     version: 1.0.0
-generated: "2026-02-19T01:00:03.645978671Z"
+generated: "2026-07-25T14:10:00.99045881Z"
