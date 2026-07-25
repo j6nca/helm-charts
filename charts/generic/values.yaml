@@ -1,0 +1,91 @@
+image:
+  registry: docker.io
+  repository: nginx
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+containerName: ""
+command: []
+args: []
+
+ports:
+  - name: http
+    containerPort: 80
+    protocol: TCP
+
+env: []
+envFrom: []
+
+resources: {}
+
+livenessProbe: {}
+readinessProbe: {}
+startupProbe: {}
+
+volumeMounts: []
+volumes: []
+
+initContainers: []
+
+replicas: 1
+strategy: {}
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+service:
+  enabled: true
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+configmap:
+  enabled: false
+  data: {}
+
+secret:
+  enabled: false
+  type: Opaque
+  stringData: {}
+
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+  imagePullSecrets: []
+
+persistence:
+  enabled: false
+  existingClaim: ""
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 8Gi
+  annotations: {}
+  mountPath: /data
+  subPath: ""
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: ""
