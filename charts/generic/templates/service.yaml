@@ -1,4 +1,10 @@
-{{- include "common.service" (list . "generic.service") }}
 {{- define "generic.service" }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    {{- toYaml .Values.service.ports | nindent 4 }}
+{{- end }}
 
+{{- if .Values.service.enabled }}
+{{- include "common.service" (list . "generic.service") }}
 {{- end }}

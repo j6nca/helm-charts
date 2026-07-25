@@ -1,0 +1,11 @@
+{{ .Chart.Name }} has been deployed.
+
+Get the application URL by running:
+  kubectl get svc -n {{ .Release.Namespace }} {{ include "common.metadata.name" . }}
+
+{{- if .Values.ingress.enabled }}
+Access via ingress:
+  {{- range .Values.ingress.hosts }}
+  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ .host }}
+  {{- end }}
+{{- end }}
