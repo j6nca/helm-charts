@@ -1,21 +1,22 @@
-{{- if and .Values.persistence.enabled (not .Values.persistence.existingClaim) }}
+{{- range $name, $config := .Values.persistentVolumeClaims }}
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "common.metadata.name" . }}
+  name: {{ $name }}
   labels:
-    {{ include "common.metadata.labels" . | indent 4 }}
-  {{- with .Values.persistence.annotations }}
+    {{- include "generic.labels" (dict "name" $name) | nindent 4 }}
+  {{- with $config.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
   accessModes:
-    - {{ .Values.persistence.accessMode | quote }}
+    - {{ $config.accessMode | default "ReadWriteOnce" | quote }}
   resources:
     requests:
-      storage: {{ .Values.persistence.size | quote }}
-  {{- with .Values.persistence.storageClass }}
+      storage: {{ $config.size | default "8Gi" | quote }}
+  {{- with $config.storageClass }}
   storageClassName: {{ . }}
   {{- end }}
 {{- end }}

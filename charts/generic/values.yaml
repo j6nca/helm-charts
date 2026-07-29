@@ -1,91 +1,102 @@
-image:
-  registry: docker.io
-  repository: nginx
-  tag: latest
-  pullPolicy: IfNotPresent
-  pullSecrets: []
+# deployments:
+#   app:
+#     image:
+#       registry: docker.io
+#       repository: nginx
+#       tag: latest
+#       pullPolicy: IfNotPresent
+#       pullSecrets: []
+#     containerName: ""
+#     command: []
+#     args: []
+#     ports:
+#       - name: http
+#         containerPort: 80
+#         protocol: TCP
+#     env: []
+#     envFrom: []
+#     resources: {}
+#     livenessProbe: {}
+#     readinessProbe: {}
+#     startupProbe: {}
+#     volumeMounts: []
+#     volumes: []
+#     initContainers: []
+#     replicas: 1
+#     strategy: {}
+#     podAnnotations: {}
+#     podSecurityContext: {}
+#     securityContext: {}
+#     nodeSelector: {}
+#     tolerations: []
+#     affinity: {}
 
-containerName: ""
-command: []
-args: []
+# services:
+#   app:
+#     type: ClusterIP
+#     ports:
+#       - port: 80
+#         targetPort: http
+#         protocol: TCP
+#         name: http
+#     selector:
+#       app.kubernetes.io/name: app
 
-ports:
-  - name: http
-    containerPort: 80
-    protocol: TCP
+# configmaps:
+#   app-config:
+#     data:
+#       key: value
 
-env: []
-envFrom: []
+# secrets:
+#   app-secret:
+#     type: Opaque
+#     stringData:
+#       password: ""
 
-resources: {}
+# serviceAccounts:
+#   app:
+#     annotations: {}
+#     imagePullSecrets: []
 
-livenessProbe: {}
-readinessProbe: {}
-startupProbe: {}
+# persistentVolumeClaims:
+#   app-data:
+#     storageClass: ""
+#     accessMode: ReadWriteOnce
+#     size: 8Gi
+#     annotations: {}
 
-volumeMounts: []
-volumes: []
+# horizontalPodAutoscalers:
+#   app:
+#     scaleTargetRef:
+#       apiVersion: apps/v1
+#       kind: Deployment
+#       name: app
+#     minReplicas: 1
+#     maxReplicas: 10
+#     targetCPUUtilizationPercentage: 80
+#     targetMemoryUtilizationPercentage: ""
 
-initContainers: []
+# ingresses:
+#   app:
+#     className: ""
+#     annotations: {}
+#     hosts:
+#       - host: chart-example.local
+#         paths:
+#           - path: /
+#             pathType: ImplementationSpecific
+#             backend:
+#               service:
+#                 name: app
+#                 port:
+#                   number: 80
+#     tls: []
 
-replicas: 1
-strategy: {}
-podAnnotations: {}
-podSecurityContext: {}
-securityContext: {}
-
-nodeSelector: {}
-tolerations: []
-affinity: {}
-
-service:
-  enabled: true
-  type: ClusterIP
-  ports:
-    - port: 80
-      targetPort: http
-      protocol: TCP
-      name: http
-
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-  hosts:
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-
-configmap:
-  enabled: false
-  data: {}
-
-secret:
-  enabled: false
-  type: Opaque
-  stringData: {}
-
-serviceAccount:
-  create: false
-  name: ""
-  annotations: {}
-  imagePullSecrets: []
-
-persistence:
-  enabled: false
-  existingClaim: ""
-  storageClass: ""
-  accessMode: ReadWriteOnce
-  size: 8Gi
-  annotations: {}
-  mountPath: /data
-  subPath: ""
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: ""
+deployments: {}
+services: {}
+configmaps: {}
+secrets: {}
+serviceAccounts: {}
+persistentVolumeClaims: {}
+horizontalPodAutoscalers: {}
+ingresses: {}
